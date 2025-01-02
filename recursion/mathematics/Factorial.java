@@ -16,10 +16,6 @@ public class Factorial {
         if(num == 0 || num == 1) {
             return 1;
         }
-        // int fact = 1;
-        // for (int i = 1; i <= num; i++) {
-        //     fact = fact * i;
-        // }
         return factorialUsingRecursion(num) * factorialUsingRecursion(num - 1);
     }
     public static void main(String[] args) {
