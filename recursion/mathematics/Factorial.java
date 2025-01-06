@@ -2,6 +2,11 @@ package recursion.mathematics;
 import java.util.*;
 
 public class Factorial {
+    /**
+     * Calculates the factorial of a number using iteration.
+     * @param num the number to calculate the factorial of
+     * @return the factorial of the number
+     */
     private static int factorialUsingIteration(int num) {
         if(num == 0 || num == 1) {
             return 1;
@@ -12,12 +17,19 @@ public class Factorial {
         }
         return fact;
     }
+
+    /**
+     * Calculates the factorial of a number using recursion.
+     * @param num the number to calculate the factorial of
+     * @return the factorial of the number
+     */
     private static int factorialUsingRecursion(int num) {
         if(num == 0 || num == 1) {
             return 1;
         }
         return factorialUsingRecursion(num) * factorialUsingRecursion(num - 1);
     }
+
     public static void main(String[] args) {
         System.out.println("Hello");
         Scanner myObj = new Scanner(System.in);

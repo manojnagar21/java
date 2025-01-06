@@ -1,5 +1,11 @@
 import java.util.*;
+
 public class Pattern {
+    /**
+     * Prints a pyramid pattern using iteration.
+     * @param num the number of rows in the pyramid
+     * @param chara the character to use for the pyramid
+     */
     public static void print1(Integer num, char chara) {
         for (int i = 0; i <= num; i++) {
             for (int j = 0; j < i; j++) {
@@ -8,6 +14,12 @@ public class Pattern {
             System.out.println();
         }
     }
+
+    /**
+     * Prints a pyramid pattern using recursion.
+     * @param num the number of rows in the pyramid
+     * @param chara the character to use for the pyramid
+     */
     public static void print2(Integer num, char chara) {
         // base case
         if (num == 0) {
@@ -16,6 +28,13 @@ public class Pattern {
         printRows(1, num, chara);
         System.out.println();
     }
+
+    /**
+     * Recursively prints rows of the pyramid.
+     * @param currentRow the current row number
+     * @param totalRows the total number of rows
+     * @param chara the character to use for the pyramid
+     */
     private static void printRows(int currentRow, int totalRows, char chara) {
         // Base case: stop when currentRow exceeds totalRows
         if (currentRow > totalRows) {
@@ -30,6 +49,11 @@ public class Pattern {
         printRows(currentRow + 1, totalRows, chara);
     }
 
+    /**
+     * Recursively prints characters for a given row.
+     * @param count the number of characters to print
+     * @param chara the character to print
+     */
     private static void printChars(int count, char chara) {
         // Base case: stop when no more characters to print
         if (count == 0) {
@@ -39,8 +63,9 @@ public class Pattern {
         // Recursive call to print the next character
         printChars(count - 1, chara);
     }
+
     public static void main(String[] args) {
-        try{
+        try {
             System.out.println("aaa");
             Scanner myObj = new Scanner(System.in);
             System.out.println("Enter a pattern number");
@@ -57,7 +82,7 @@ public class Pattern {
                 myObj.close();
                 return;
             }
-            System.out.println("Enter a charatcer");
+            System.out.println("Enter a character");
             char chara = myObj.next().charAt(0);
             switch(patternNum){
                 case 1:
