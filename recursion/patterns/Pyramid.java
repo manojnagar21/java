@@ -10,9 +10,7 @@ public class Pyramid {
         if(num == 0) {
             return;
         }
-        int start = 1;
-        printRows(start, num, chara);
-        System.out.println();
+        printRows(1, num, chara);
     }
 
     /**
@@ -26,9 +24,7 @@ public class Pyramid {
             return;
         }
         printCharacters(start, chara);
-        if(start != num) {
-            System.out.println();
-        }
+        System.out.println();
         printRows(start + 1, num, chara);
     }
 
