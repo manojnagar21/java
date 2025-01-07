@@ -72,8 +72,10 @@ public class Pattern {
             // Enter pattern number
             System.out.println("Enter a pattern number to print from the list");
             System.out.println(
-                "1. Print pyramid using iteration\n" +
-                "2. Print pyramid using recursion\n"
+                """
+                1. Print pyramid using iteration
+                2. Print pyramid using recursion
+                """
             );
             Integer patternNum = myObj.nextInt();
             System.out.println("Enter a number");
